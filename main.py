@@ -1,5 +1,29 @@
 import random
 
+
+class Row:
+	def __init__(self, table, index, data=None):
+		self.fields = table.fields
+		self.data = {}
+		self.index = index
+		for i in range(len(self.fields)):
+			if data:
+				self.data[self.fields[i]] = data[i]
+			else:
+				self.data[self.fields[i]] = None
+	
+	def add_val(self, name, data): #to add a field value to the row
+		self.data[name] = data
+
+	def get_val(self, name):
+		return self.data[name]
+
+	def remove_val(self, name): #to remove a field from row
+		self.data[name] = None
+
+	def del_field(self, name)
+
+
 class Table:
 	def __init__(self, name="Table"):
 		self.name = name
