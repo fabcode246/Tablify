@@ -11,3 +11,11 @@ class Table:
 			self.fields.insert(pos, name)
 		else:
 			self.fields.append(name)
+
+	def remove_field(self, index):
+		name = self.fields[index]
+		for i in self.rows:
+			i.remove_field(name)
+
+		self.fields.pop(index)
+
