@@ -53,3 +53,18 @@ class Table:
 
 	def remove_row(self, index):
 		self.rows.pop(index)
+
+	def text_table(self, style='normal'):
+		if style == 'normal':
+			pass
+		if style == 'styled'
+			pass
+
+	def render(self, style):
+		if style == 'text':
+			return self.text_table('normal')
+		if style == 'text styled'
+			return self.text_table('styled')
+
+	def __str__(self):
+		return self.render('text')
