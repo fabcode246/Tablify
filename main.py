@@ -43,3 +43,13 @@ class Table:
 
 		self.fields.pop(index)
 
+	def add_row(self, data: list):
+		new_row = Row(self, len(self.rows), data)
+		self.rows.append(new_row)
+		return new_row
+
+	def get_row(self, index):
+		return self.rows[index]
+
+	def remove_row(self, index):
+		self.rows.pop(index)
